@@ -1,0 +1,8 @@
+[tool.black]
+line-length = 79
+target-version = ["py38"]
+
+[tool.isort]
+profile = "black"
+skip_gitignore = true
+line_length = 79

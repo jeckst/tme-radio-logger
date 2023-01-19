@@ -1,0 +1,10 @@
+OUTPUT_FILE_DIR: "."
+OUTPUT_FILE_PREFIX: "out_"
+ENDPOINT: "http://192.168.1.254/fresh.xml"
+CSV_PARAMS: 
+  delimiter: ";"
+  quotechar: '"'
+  quoting: 0  # csv.QUOTE_MINIMAL
+  # quoting: 1  # csv.QUOTE_ALL
+  # quoting: 2  # csv.QUOTE_NONNUMERIC
+  # quoting: 3  # csv.QUOTE_NONE
