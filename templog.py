@@ -130,11 +130,14 @@ if __name__ == "__main__":
     all_sensor_columns = BASE_COLUMNS + sensor_data.names
     current_file = find_current_output_file()
     if current_file:
+        current_file_path = os.path.join(
+            config["OUTPUT_FILE_DIR"], current_file
+        )
         current_file_index = get_output_file_index(current_file)
-        current_file_columns = get_current_ouput_columns(current_file)
+        current_file_columns = get_current_ouput_columns(current_file_path)
         if set(current_file_columns) == set(all_sensor_columns):
             existing_file_write_values(
-                current_file, current_file_columns, sensor_data
+                current_file_path, current_file_columns, sensor_data
             )
         else:
             new_file_write_values(
